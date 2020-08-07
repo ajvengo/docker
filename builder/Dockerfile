@@ -26,6 +26,7 @@ RUN \
         git \
         git-buildpackage \
         lld \
+        lsb-release \
         nano \
         ninja-build \
         zstd && \
