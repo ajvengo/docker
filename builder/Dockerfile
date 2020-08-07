@@ -11,6 +11,8 @@ ENV TZ=Europe/Moscow
 RUN \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ >/etc/timezone && \
+    echo "deb [arch=amd64] https://apt.diamant-sk.ru/ubuntu focal main" >/etc/apt/sources.list.d/diamant.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0DF38BB2921381DA && \
     apt -q update && \
     apt -yq upgrade && \
     apt install -yq --no-install-recommends \
@@ -23,6 +25,7 @@ RUN \
         devscripts \
         equivs \
         g++ \
+        gdebi-core \
         git \
         git-buildpackage \
         gpg \
