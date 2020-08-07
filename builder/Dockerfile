@@ -25,10 +25,13 @@ RUN \
         g++ \
         git \
         git-buildpackage \
+        gpg \
+        gpg-agent \
         lld \
         lsb-release \
         nano \
         ninja-build \
+        openssh-client \
         zstd && \
     rm /var/lib/apt/lists/*_*
 
