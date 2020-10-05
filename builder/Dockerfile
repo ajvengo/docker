@@ -33,6 +33,7 @@ RUN \
         nano \
         ninja-build \
         openssh-client \
+        pkg-config \
         zstd && \
     echo "deb [arch=amd64] https://apt.diamant-sk.ru/ubuntu focal main" >/etc/apt/sources.list.d/diamant.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0DF38BB2921381DA && \
