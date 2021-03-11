@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:experimental
 
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 MAINTAINER Vladimir Rapatskiy <rapatsky@gmail.com>
 
@@ -21,6 +21,7 @@ RUN \
         curl \
         debhelper \
         devscripts \
+        dirmngr \
         equivs \
         g++ \
         gdebi-core \
@@ -35,7 +36,7 @@ RUN \
         openssh-client \
         pkg-config \
         zstd && \
-    echo "deb [arch=amd64] https://apt.diamant-sk.ru/ubuntu focal main" >/etc/apt/sources.list.d/diamant.list && \
+    echo "deb [arch=amd64] https://apt.diamant-sk.ru/ubuntu bionic main" >/etc/apt/sources.list.d/diamant.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0DF38BB2921381DA && \
     rm /var/lib/apt/lists/*_*
 
